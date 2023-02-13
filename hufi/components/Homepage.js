@@ -199,7 +199,7 @@ function Homepage(props) {
 				if ( tmp != 'None' && tmp != 'Unknow') {
 					let response;
 					let code = 222;
-					await axios.post(`${URL_API}/studentEvents`, {
+					await axios.put(`${URL_API}/studentEvents/check`, {
 						studentMSSV: array[i].slice(1, array[i].length-1),
 						eventName: selected
 					}).then( res => {
